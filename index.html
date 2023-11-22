@@ -1,0 +1,37 @@
+<Html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="calculate.js"></script>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div class="calcContainer">
+                <h2>Calculate cost for used gas volume</h2>
+                <div class="calc" >
+                    <div class="inputContainer">
+                        <p class="inputText">Gas used (metric cubes) : </p>
+                        <input class="inputBox" id="used_gas">
+                        <p class="inputText" >m <sup>3</sup></p>
+                    </div>
+                    <div class="inputContainer">
+                        <p class="inputText">Calorific value : </p>
+                        <input value="39.3"class="inputBox" id="calorific_value">
+                        <p class="inputText" >kJ/kg</p>
+                        <p class="inputText"> default value added</p>
+                    </div>
+                    <div class="inputContainer">
+                        <p class="inputText">Correction factor : </p>
+                        <input value="1.02264"class="inputBox" id="corr_fac">
+                        <p class="inputText"> default value added</p>
+                    </div>
+                    <div class="inputContainer">
+                        <p class="inputText">Cost per kWh : &#163</p>
+                        <input class="inputBox" id="cost">
+                    </div>
+                    <button class="button" type="button" onclick="calculate()">Calculate</button><br>
+                    <span>The gas used is : &#163 </span><span id="result"></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</Html>
