@@ -25,11 +25,6 @@
     border-radius: 30px;
 }
 
-.calc{
-    width: fit-content;
-    margin: 10px 0px;
-}
-
 .inputContainer{
     display: block;
 }
@@ -46,7 +41,7 @@
     padding:5px;
 }
 
-.button{
+.submitButton{
     margin: 10px 0px;
 }
 
