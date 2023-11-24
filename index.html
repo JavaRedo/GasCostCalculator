@@ -1,4 +1,4 @@
-<Html>
+<!DOCtype Html>
     <head>
         <link rel="stylesheet" href="style.css">
         <script src="calculate.js"></script>
@@ -7,30 +7,33 @@
         <div class="mainContainer">
             <div class="calcContainer">
                 <h2>Calculate cost for used gas volume</h2>
-                <div class="calc" >
+                <form class="calc">
                     <div class="inputContainer">
-                        <p class="inputText">Gas used (metric cubes) : </p>
-                        <input class="inputBox" id="used_gas">
-                        <p class="inputText" >m <sup>3</sup></p>
+                        <p class="inputText">Gas used : </p>
+                        <input class="inputBox" id="used_gas" name="usedGas">
+                        <input type="radio" id="gas_units_l" value="litres" name="units">
+                        <label for="gas_units_l">litres</label>
+                        <input type="radio" id="gas_units_m3" value="metres ^3" name="units"> 
+                        <label for="gas_units_m3">metres <sup>3</sup></label>
                     </div>
                     <div class="inputContainer">
                         <p class="inputText">Calorific value : </p>
-                        <input value="39.3"class="inputBox" id="calorific_value">
+                        <input value="39.3"class="inputBox" id="calorific_value" name="calVal">
                         <p class="inputText" >kJ/kg</p>
                         <p class="inputText"> default value added</p>
                     </div>
                     <div class="inputContainer">
                         <p class="inputText">Correction factor : </p>
-                        <input value="1.02264"class="inputBox" id="corr_fac">
+                        <input value="1.02264"class="inputBox" id="corr_fac" name="corrFac">
                         <p class="inputText"> default value added</p>
                     </div>
                     <div class="inputContainer">
                         <p class="inputText">Cost per kWh : &#163</p>
-                        <input class="inputBox" id="cost">
+                        <input class="inputBox" id="cost" name="cost">
                     </div>
-                    <button class="button" type="button" onclick="calculate()">Calculate</button><br>
+                    <input class="submitButton" type="submit" name="calculate"><br>
                     <span>The gas used is : &#163 </span><span id="result"></span>
-                </div>
+                </form>
             </div>
         </div>
     </body>
